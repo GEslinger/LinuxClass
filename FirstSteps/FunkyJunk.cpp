@@ -24,5 +24,7 @@ int main(){
 		cout << pointer[i] << "\n";
 	}
 
+	delete pointer;
+
 	cout << "Array pointer's address: " << &pointer << "\n";
 }

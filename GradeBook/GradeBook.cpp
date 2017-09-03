@@ -18,32 +18,42 @@ void GradeBook::setCourseName(string name){ courseName = name; }
 
 void GradeBook::setLetterGrade(string g){ letterGrade = g; }
 
-string getCourseName() const { return courseName; }
+string GradeBook::getCourseName() const { return courseName; }
 
-string getLetterGrade() const { return letterGrade; }
+string GradeBook::getLetterGrade() const { return letterGrade; }
 
-void displayMessage() const {
+void GradeBook::displayMessage() const {
 	cout << "GradeBook for " << this->getCourseName() << endl;
 	cout << "Letter grade is " << this->getLetterGrade() << endl;
 }
 
 
 int main(){
+	string in;
+
 	GradeBook a;
 	cout << "Input course name: ";
-	a.setCourseName(cin.get());
+	cin >> in;
+	a.setCourseName(in);
 	cout << "Input current letter grade: ";
-	a.setLetterGrade(cin.get());
+	cin >> in;
+	a.setLetterGrade(in);
 
-	cout << endl << a.displayMessage() << endl;
+	cout << endl;
+	a.displayMessage();
+	cout << endl;
 
 	GradeBook b;
-	cout << "Next couse name: "
-	b.setCourseName(cin.get());
-	cout << "Next current letter grade: "
-	b.setLetterGrade(cin.get());
+	cout << "Next couse name: ";
+	cin >> in;
+	b.setCourseName(in);
+	cout << "Next current letter grade: ";
+	cin >> in;
+	b.setLetterGrade(in);
 
-	cout << endl << b.displayMessage() << endl;
+	cout << endl;
+	b.displayMessage();
+	cout << endl;
 
 
 	return 0;
