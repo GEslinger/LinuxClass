@@ -1,0 +1,26 @@
+Object 1  constructor runs (global before main)
+
+MAIN FUNCTION: EXECUTION BEGINS
+Object 2  constructor runs (local automatic in main)
+Object 3  constructor runs (local static in main)
+
+CREATE FUNCTION: EXECUTION BEGINS
+Object 5  constructor runs (local automatic in create)
+Object 6  constructor runs (local static in create)
+Object 7  constructor runs (local automatic in create)
+
+CREATE FUNCTION: EXECUTION BEGINS
+Object 7  destructor runs   (local automatic in create)
+Object 5  destructor runs   (local automatic in create)
+
+MAIN FUNCTION: EXECUTION RESUMES
+Object 4  constructor runs (local automatic in main)
+
+MAIN FUNCTION: EXECUTION ENDS
+Object 4  destructor runs   (local automatic in main)
+Object 2  destructor runs   (local automatic in main)
+Object 6  destructor runs   (local static in create)
+Object 3  destructor runs   (local static in main)
+Object 1  destructor runs   (global before main)
+
+Makes sense! But we have to be careful about being static, things stick around for quite a while
