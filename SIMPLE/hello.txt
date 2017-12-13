@@ -1,0 +1,4 @@
+10 let 4 = 5
+11 let x = 4
+12 print x
+13 end
